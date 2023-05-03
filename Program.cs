@@ -12,14 +12,14 @@
                     Console.ForegroundColor = ConsoleColor.Red;
                 }
 
-                Console.WriteLine("Points: " + points);
+                Console.WriteLine($"Points: {points}");
                 Console.ResetColor();
 
                 Console.WriteLine("Smaller, Bigger or Equal? ");
-                Console.WriteLine(no1 + " ? " + no2);
+                Console.WriteLine($"{no1} _ {no2}");
                 string? input = Console.ReadLine();
 
-                if (!string.IsNullOrEmpty(input)) {
+                if (input == "<" || input == ">" || input == "=") {
                     Console.Clear();
                     if (no1 > no2 && input == ">"
                     || no1 < no2 && input == "<"
@@ -35,7 +35,7 @@
                     Console.ResetColor();
                 } else {
                     Console.Clear();
-                    Console.WriteLine("'" + input + "'" + " is not a valid input. Type <, > or =.\r\n");
+                    Console.WriteLine($"'{input}' is not a valid input. Type <, > or =.\r\n");
 
                 }
 
